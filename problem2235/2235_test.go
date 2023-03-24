@@ -16,19 +16,21 @@ func TestSum(t *testing.T) {
 			name: "sum of 4 and 6",
 			num1: 4,
 			num2: 6,
-			want: 10,
+			want: 11,
 		},
 		{
 			name: "sum of -1 and 6",
 			num1: -1,
 			num2: 6,
-			want: 5,
+			want: 56,
 		},
 	}
 
 	for _, test := range tests {
-		l := Sum(test.num1, test.num2)
+		t.Run(test.name, func(t *testing.T) {
+			l := Sum(test.num1, test.num2)
 
-		require.Equal(t, test.want, l)
+			require.Equal(t, test.want, l)
+		})
 	}
 }
