@@ -14,7 +14,7 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 		}
 		last--
 	}
-	if j > i {
+	if j >= 0 {
 		for last >= 0 {
 			nums1[last] = nums2[j]
 			last--
