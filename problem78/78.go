@@ -2,7 +2,7 @@ package problem78
 
 func subsets(nums []int) [][]int {
 	result := [][]int{{}}
-	buf := []int{}
+	buf := make([]int, 0, len(nums))
 
 	var backtrack func(int, int, []int)
 	backtrack = func(start, left int, cur []int) {
