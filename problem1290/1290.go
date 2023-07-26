@@ -15,5 +15,4 @@ func getDecimalValue(head *ListNode) int {
 		decNum = decNum*2 + node.Next.Val
 	}
 	return decNum
-
 }
